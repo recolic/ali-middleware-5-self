@@ -20,7 +20,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class UserLoadBalance implements LoadBalance {
     private int n = 0;
-    private int[] peers = {0,0,0,1,1,2};
+    private int[] peers = {0,1,1,2,2,2};
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
         ++n;
